@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-zinc-900 min-h-screen p-10">
+        <a class="text-violet-500 inline-block mb-10" href="/">Go to Home</a>
+        <div class="form text-white">
+            <form action="/edit/<%= filename  %>" method="post">
+                <input class="block w-full px-5 py-2 bg-zinc-700 rounded-md outline-none" type="text" value="<%= filename.split('.')[0] %>" name="title">
+                <textarea class="block w-full mt-2 px-5 py-2 resize-none bg-zinc-700 rounded-md outline-none" placeholder="Write Notes" name="details"><%= filedata %></textarea>
+                <input class="mt-2 bg-violet-600 px-5 py-2 rounded-md" type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
